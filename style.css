@@ -1,0 +1,17 @@
+html {
+	max-width: 100ch;
+	padding: 2ch;
+	margin: auto;
+	font-size: 1.2em;
+	font-family: Cambria;
+	background-color: gray;
+}
+.chatBox {
+	background-color: #f0fff0;
+	width: 40vh;
+	height: 70vh;
+	padding-left: 10px;
+	word-wrap: break-word;
+	overflow: scroll;
+	text-overflow: ellipsis;
+}
