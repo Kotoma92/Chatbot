@@ -2,29 +2,33 @@ updateView();
 function updateView() {
 
     document.getElementById('app').innerHTML =/*html*/ `
-    <h2>Twitch Chat</h2>
+    <div class"chat">
+        <div class="boiText">Good boi counter = ${goodWordsCounter}</div>
+        <div class="boiText">Bad boi counter = ${badWordsCounter}</div>
 
-    <div>Good boi counter = ${goodWordsCounter}</div><div>Bad boi counter = ${badWordsCounter}</div>
+        <div class="chatBox">${chat}</div><br>
 
-    <div class="chatBox">
-    ${chat}
-    </div><br>
+        <input id="input" ${badWordsButton ? 'disabled' : ''} placeholder="Chat here" class="chatInput" oninput="chatInput = this.value"/>
+        <br>
+        <button ${badWordsButton ? 'disabled' : ''} onclick="sendChat()" class="chatButton">Send</button>
+        <button class="chatButton" onclick="clearChat()">Clear chat</button>
+        <br>
+        <button class="chatButton" onclick="showGoodWords()">Post good words</button>
+        <br>
+        <button class="chatButton" onclick="showBadWords()">Post bad words</button>
+        <button class="chatButton" ${goodBoiBoolean ? '' : 'hidden'} onclick="goodBoiView()">Du har vært en good boi</button>
+    </div>
 
-    <input id="input" ${badWordsButton ? 'disabled' : ''} placeholder="Chat here" class="chatInput" oninput="chatInput = this.value"/>
+    <div class="specs">
+        Specs: HP Pavilion T000<br>
+        CPU: AMD Athlon 64 3200<br>
+        RAM: 512MB DDR<br>
+        HDD: 160GB<br>
+        ROM: DVD Writer<br>
+        GPU: Nvidia FX5500 256MB Graphics (VGA & DVI port)<br>
+        OS: Windows XP<br>
+    </div>
 
-    <button ${badWordsButton ? 'disabled' : ''} onclick="sendChat()" class="chatButton">Send</button>
-
-    <button onclick="clearChat()">Clear chat</button>
-
-    <br>
-
-    <button onclick="showBadWords()">Show bad words</button>
-    <button onclick="showGoodWords()">Show good words</button>
-
-    <div ${badWordsBoolean ? '' : 'hidden'}>${badWords}</div>
-    <div ${goodWordsBoolean ? '' : 'hidden'}>${goodWords}</div>
-
-    <button ${goodBoiBoolean ? '' : 'hidden'} onclick="goodBoiView()">Du har vært en good boi</button>
     `;
 }
 

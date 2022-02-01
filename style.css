@@ -1,16 +1,62 @@
 html {
-	max-width: 100ch;
-	padding: 2ch;
-	margin: auto;
+	margin: 0px;
 	font-size: 1.2em;
 	font-family: Cambria;
-	background-color: gray;
+	color: white;
+	background-color: rgb(31, 31, 31);
 }
+
+.wrapper {
+	display: grid;
+	grid-template-columns: 1.6fr 0.4fr;
+	grid-template-rows: 1.8fr, 0.2fr;
+	max-height: 100vh;
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
+}
+
+.titleText {
+	padding-left: 1ch;
+}
+
+.boiText {
+	grid-column: 2;
+}
+
+.rykningVideo {
+	grid-column-start: 1;
+}
+
+.mvcWrapper {
+	grid-column: 2;
+	grid-row: 1;
+}
+
 .chatBox {
-	background-color: #f0fff0;
-	width: 40vh;
-	height: 70vh;
+	background-color: #383838;
+	width: auto;
+	height: 60vh;
 	padding-left: 10px;
 	word-wrap: break-word;
-	overflow: auto;
+	flex-direction: column;
+	overflow: scroll;
+}
+
+.chatInput {
+	width: auto;
+	height: 5vh;
+	font-size: large;
+}
+
+.chatButton {
+	width: auto;
+}
+
+.wordButton {
+	word-wrap: break-word;
+}
+
+.specs {
+	grid-column: 1;
+	grid-row: 2;
 }

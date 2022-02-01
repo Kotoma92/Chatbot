@@ -7,9 +7,9 @@ let badWordsBoolean = false;
 let goodWordsBoolean = false;
 let goodBoiBoolean = false;
 const badWords = ['simp',
-                'racist',
+                'incel',
                 'retard',
-                'nazi',
+                'virgin',
                 'www',
                 '.com',
                 '.org',
@@ -18,8 +18,8 @@ const badWords = ['simp',
                 'benjamin',
                 'tommy'];
                 
-const goodWords = ['pog',
-                'pogchamp',
+const goodWords = ['nøkkelkompetanser',
+                'growth mindset',
                 'erlend',
                 'therese',
                 'linn',

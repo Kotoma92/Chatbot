@@ -39,7 +39,7 @@ function isBadWordWithReturnValue(){
 //Denne passer på at man ikke har sagt for mye dumt. Hvis man sier for mye dumt, blir man bannlyst.
 function incrementBadWord(){
     badWordsCounter ++;
-    goodWordsBoolean = false;
+    goodBoiBoolean = false;
     if(goodWordsCounter > 0) goodWordsCounter --;
     if(badWordsCounter == 3) {
         chat += '<br>You are now banned';
@@ -75,19 +75,19 @@ function clearChat(){
     badWordsCounter = 0;
     goodWordsCounter = 0;
     badWordsButton = false;
-    goodWordsBoolean = false;
+    goodBoiBoolean = false;
     updateView();
 }
 
 //Disse to viser verdiene i Array'ene
-function showBadWords(){
-    badWordsBoolean = !badWordsBoolean;
-    goodWordsBoolean = false;
+function showGoodWords(){
+    clearChat();
+    chat += goodWords.join("<br>");
     updateView();
 }
 
-function showGoodWords(){
-    goodWordsBoolean = !goodWordsBoolean;
-    badWordsBoolean = false;
+function showBadWords(){
+    clearChat();
+    chat += badWords.join("<br>");
     updateView();
 }
