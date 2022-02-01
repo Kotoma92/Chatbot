@@ -1,5 +1,5 @@
-var chat = '';
-var chatInput = '';
+var chat;
+var chatInput;
 var badWordsCounter = 0;
 var goodWordsCounter = 0;
 var badWordsButton = false;
@@ -17,6 +17,7 @@ const badWords = ['simp',
                 'http',
                 'benjamin',
                 'tommy'];
+                
 const goodWords = ['pog',
                 'pogchamp',
                 'erlend',

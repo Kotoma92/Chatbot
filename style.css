@@ -11,8 +11,6 @@ html {
 	width: 40vh;
 	height: 70vh;
 	padding-left: 10px;
-	text-align: bottom;
 	word-wrap: break-word;
-	overflow: scroll;
-	text-overflow: ellipsis;
+	overflow: auto;
 }

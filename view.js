@@ -5,9 +5,10 @@ function updateView() {
     <h2>Twitch Chat</h2>
     <div>Good boi counter = ${goodWordsCounter}</div><div>Bad boi counter = ${badWordsCounter}</div>
     <div class="chatBox">${chat}</div><br>
-    <input placeholder="Chat here" class="chatInput" oninput="chatInput = this.value" />
+    <input ${badWordsButton ? 'disabled' : ''} placeholder="Chat here" class="chatInput" oninput="chatInput = this.value"/>
     <button ${badWordsButton ? 'disabled' : ''} onclick="sendChat()" class="chatButton">Send</button>
-    
+    <button onclick="clearChat()">Clear chat</button>
+    <br>
     <button onclick="showBadWords()">Show bad words</button>
     <button onclick="showGoodWords()">Show good words</button>
 
@@ -21,6 +22,8 @@ function updateView() {
 function goodBoiView() {
     document.getElementById('app').innerHTML =/*html*/ `
     
+    <h1>Du har vært en good boi :3</h1>
+    <h3>Ta noen cookies og melk!</h3>
     <img src="./a31c703e-3403-4a14-acdc-79ce4b7db884.jpg">
 
     <button onclick="updateView()">Gå tilbake</button>
