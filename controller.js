@@ -1,10 +1,14 @@
+//En event listener som ser etter keypresses, sender keypress gjennom parameter "e".
+//Så sjekker den en if statement om det er enter tasten som er trykket.
 window.addEventListener("keypress", sendKey);
 function sendKey(e){
-    if(e.code === 'Enter'|| e.code === 'NumpadEnter' && badWordsButton == false) {
+    if(e.code === 'Enter'|| e.code === 'NumpadEnter') {
         sendChat();
     }
 }
 
+//Dette er hovedfunksjonen som binder alt sammen. Den sjekker om de andre funksjonene finner "BadWords eller GoodWords", så kjører den en funksjon med return verdi for å putte inn i chat boksen hvis de er enten Bad eller Good words. Hvis ikke, kjører input rett i chat boksen med en Break.
+//Så oppdaterer den veiwet, og fokuserer på input slik at man kan fortsette å skrive.
 function sendChat(){
   if(isBadWord()){
     chat += isBadWordWithReturnValue();
@@ -32,6 +36,7 @@ function isBadWordWithReturnValue(){
     return `<br>Your comment was deleted<del><br>${chatInput}</del>`;
 }
 
+//Denne passer på at man ikke har sagt for mye dumt. Hvis man sier for mye dumt, blir man bannlyst.
 function incrementBadWord(){
     badWordsCounter ++;
     goodWordsBoolean = false;
@@ -55,6 +60,7 @@ function isGoodWordWithReturnValue(){
         return `<br>${chatInput}`;
 }
 
+//Denne gir deg en liten reward når man har vært snill :)
 function incrementGoodWord(){
     goodWordsCounter ++;
     if(goodWordsCounter == 3) {
