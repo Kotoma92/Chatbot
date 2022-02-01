@@ -1,6 +1,6 @@
 html {
 	margin: 0px;
-	font-size: 1.2em;
+	font-size: 1.1em;
 	font-family: Cambria;
 	color: white;
 	background-color: rgb(31, 31, 31);
@@ -10,7 +10,7 @@ html {
 	display: grid;
 	grid-template-columns: 1.6fr 0.4fr;
 	grid-template-rows: 1.8fr, 0.2fr;
-	max-height: 100vh;
+	max-height: 90vh;
 	grid-column-gap: 20px;
 	grid-row-gap: 20px;
 }
