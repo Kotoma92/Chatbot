@@ -71,7 +71,7 @@ function incrementGoodWord(){
     }
 }   
 
-//Denne clearer resetter chat, setter verdier til false og 0
+//Denne clearer, resetter chat, setter verdier til false og 0
 function clearChat(){
     chat = '';
     badWordsCounter = 0;
