@@ -1,6 +1,6 @@
 html {
 	margin: 0px;
-	font-size: 1.1em;
+	font-size: 1em;
 	font-family: Cambria;
 	color: white;
 	background-color: rgb(31, 31, 31);
@@ -44,7 +44,7 @@ html {
 
 .chatInput {
 	width: auto;
-	height: 5vh;
+	height: 3vh;
 	font-size: large;
 }
 
