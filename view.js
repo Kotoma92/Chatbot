@@ -8,11 +8,13 @@ function updateView() {
     <input placeholder="Chat here" class="chatInput" oninput="chatInput = this.value" />
     <button ${badWordsButton ? 'disabled' : ''} onclick="sendChat()" class="chatButton">Send</button>
     
-    <button onclick="showWords()">Show bad words</button>
+    <button onclick="showBadWords()">Show bad words</button>
+    <button onclick="showGoodWords()">Show good words</button>
 
     <div ${badWordsBoolean ? '' : 'hidden'}>${badWords}</div>
+    <div ${goodWordsBoolean ? '' : 'hidden'}>${goodWords}</div>
 
-    <button ${goodWordsBoolean ? '' : 'hidden'} onclick="goodBoiView()">Du har vært en good boi</button>
+    <button ${goodBoiBoolean ? '' : 'hidden'} onclick="goodBoiView()">Du har vært en good boi</button>
     `;
 }
 

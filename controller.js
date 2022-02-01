@@ -12,16 +12,15 @@ function sendChat() {
             badWordsButton = true;
         }
         updateView();
-        
     } 
+    
     if(goodWords.find(w => (chatInput.toLowerCase().includes(w)))) {
         console.log('Good Word')
         chat += '<br>' + chatInput; 
-        if(badWordsCounter > 0) badWordsCounter -= 1;
         goodWordsCounter += 1;
         if(goodWordsCounter == 3) {
             chat += '<br>You are now a good boi!';
-            goodWordsBoolean = true;
+            goodBoiBoolean = true;
         }
         updateView();
     } else {
@@ -31,7 +30,12 @@ function sendChat() {
     }
 }
 
-function showWords() {
+function showBadWords() {
     badWordsBoolean = !badWordsBoolean;
+    updateView();
+}
+
+function showGoodWords() {
+    goodWordsBoolean = !goodWordsBoolean;
     updateView();
 }

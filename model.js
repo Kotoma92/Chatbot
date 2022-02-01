@@ -5,6 +5,7 @@ var goodWordsCounter = 0;
 var badWordsButton = false;
 let badWordsBoolean = false;
 let goodWordsBoolean = false;
+let goodBoiBoolean = false;
 const badWords = ['simp',
                 'racist',
                 'retard',
