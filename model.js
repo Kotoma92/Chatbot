@@ -1,8 +1,10 @@
 var chat = '';
 var chatInput = '';
-var badWordCounter = 0;
-var button = false;
-let showWordsBoolean = false;
+var badWordsCounter = 0;
+var goodWordsCounter = 0;
+var badWordsButton = false;
+let badWordsBoolean = false;
+let goodWordsBoolean = false;
 const badWords = ['simp',
                 'racist',
                 'retard',
@@ -14,3 +16,15 @@ const badWords = ['simp',
                 'http',
                 'benjamin',
                 'tommy'];
+const goodWords = ['pog',
+                'pogchamp',
+                'erlend',
+                'therese',
+                'linn',
+                'terje',
+                'eskil',
+                'geir',
+                'chorei',
+                'get',
+                'get academy',
+                'kristian'];
