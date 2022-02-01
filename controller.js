@@ -1,6 +1,6 @@
 window.addEventListener("keypress", sendKey);
 function sendKey(e){
-    if(e.code === 'Enter'|| e.code === 'NumpadEnter') {
+    if(e.code === 'Enter'|| e.code === 'NumpadEnter' && badWordsButton == false) {
         sendChat();
     }
 }
@@ -17,6 +17,7 @@ function sendChat(){
     chat += `<br>${chatInput}`;
 }
     updateView();
+    document.getElementById('input').focus();
 }
 
 function isBadWord(){
@@ -24,7 +25,7 @@ function isBadWord(){
         console.log('Du skrev noe naughty');
         return true;
     }
-   return false;
+    return false;
 }
 
 function isBadWordWithReturnValue(){
@@ -62,14 +63,17 @@ function incrementGoodWord(){
     }
 }   
 
+//Denne clearer resetter chat, setter verdier til false og 0
 function clearChat(){
     chat = '';
     badWordsCounter = 0;
     goodWordsCounter = 0;
     badWordsButton = false;
+    goodWordsBoolean = false;
     updateView();
 }
 
+//Disse to viser verdiene i Array'ene
 function showBadWords(){
     badWordsBoolean = !badWordsBoolean;
     goodWordsBoolean = false;

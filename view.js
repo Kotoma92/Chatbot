@@ -3,12 +3,21 @@ function updateView() {
 
     document.getElementById('app').innerHTML =/*html*/ `
     <h2>Twitch Chat</h2>
+
     <div>Good boi counter = ${goodWordsCounter}</div><div>Bad boi counter = ${badWordsCounter}</div>
-    <div class="chatBox">${chat}</div><br>
-    <input ${badWordsButton ? 'disabled' : ''} placeholder="Chat here" class="chatInput" oninput="chatInput = this.value"/>
+
+    <div class="chatBox">
+    ${chat}
+    </div><br>
+
+    <input id="input" ${badWordsButton ? 'disabled' : ''} placeholder="Chat here" class="chatInput" oninput="chatInput = this.value"/>
+
     <button ${badWordsButton ? 'disabled' : ''} onclick="sendChat()" class="chatButton">Send</button>
+
     <button onclick="clearChat()">Clear chat</button>
+
     <br>
+
     <button onclick="showBadWords()">Show bad words</button>
     <button onclick="showGoodWords()">Show good words</button>
 

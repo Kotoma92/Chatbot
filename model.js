@@ -1,8 +1,8 @@
-var chat;
+var chat = '';
 var chatInput;
 var badWordsCounter = 0;
 var goodWordsCounter = 0;
-var badWordsButton = false;
+let badWordsButton = false;
 let badWordsBoolean = false;
 let goodWordsBoolean = false;
 let goodBoiBoolean = false;
