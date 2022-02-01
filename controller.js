@@ -2,8 +2,10 @@
 //Så sjekker den en if statement om det er enter tasten som er trykket.
 window.addEventListener("keypress", sendKey);
 function sendKey(e){
-    if(e.code === 'Enter'|| e.code === 'NumpadEnter') {
-        sendChat();
+    if(!badWordsButton){
+        if(e.code === 'Enter'|| e.code === 'NumpadEnter') {
+            sendChat();
+        }
     }
 }
 
